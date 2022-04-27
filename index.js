@@ -295,5 +295,6 @@ startGame.addEventListener("click", () => {
   animate();
   spawnEnemies();
   music.play();
+  music.loop = 1;
   startWindow.style.display = "none";
 });
