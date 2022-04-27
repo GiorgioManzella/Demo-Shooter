@@ -1,5 +1,5 @@
 const canvas = document.querySelector("canvas");
-
+const bg = "./Data/39613.jpg";
 const c = canvas.getContext("2d");
 
 console.log(gsap);
@@ -265,6 +265,7 @@ function animate() {
             projectiles.splice(index2, 1);
           });
           console.log("touched");
+          hit.play();
           dead.play();
         }
       }
