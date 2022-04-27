@@ -11,8 +11,10 @@ const startGame = document.getElementById("startGame");
 const startWindow = document.getElementById("startWindow");
 const endScore = document.getElementById("endScore");
 
-const music = new Audio("./Demo-Shooter/Data/Wizario - VideoGame.wav");
-const blaster = new Audio("./Demo-Shooter/Data/blaster.mp3");
+const music = new Audio("../Demo-Shooter/Data/Wizario - VideoGame.wav");
+const blaster = new Audio("../Demo-Shooter/Data/blaster.mp3");
+const dead = new Audio("../Demo-Shooter/Data/dead.mp3");
+const hit = new Audio("../Demo-Shooter/Data/hit.mp3");
 
 // here I define the player class *****************
 
@@ -179,6 +181,7 @@ function spawnEnemies() {
 
 let animationID;
 let score = 0;
+const backgroundImage = "/Demo-Shooter/Data/39613.jpg";
 
 function animate() {
   animationID = requestAnimationFrame(animate);
@@ -252,6 +255,7 @@ function animate() {
 
           setTimeout(() => {
             projectiles.splice(index2, 1);
+            hit.play();
           });
         } else {
           score += 300;
@@ -261,6 +265,7 @@ function animate() {
             projectiles.splice(index2, 1);
           });
           console.log("touched");
+          dead.play();
         }
       }
     });

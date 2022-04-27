@@ -1,3 +1,7 @@
 #body {
   margin: 0;
 }
+
+#canvas {
+  background-image: "./Demo-Shooter/Data/39613.jpg";
+}
