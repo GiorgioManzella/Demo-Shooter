@@ -11,6 +11,9 @@ const startGame = document.getElementById("startGame");
 const startWindow = document.getElementById("startWindow");
 const endScore = document.getElementById("endScore");
 
+const music = new Audio("./Demo-Shooter/Data/Wizario - VideoGame.wav");
+const blaster = new Audio("./Demo-Shooter/Data/blaster.mp3");
+
 // here I define the player class *****************
 
 class Player {
@@ -215,6 +218,7 @@ function animate() {
       cancelAnimationFrame(animationID);
       startWindow.style.display = "flex";
       endScore.innerHTML = score;
+      music.pause();
     }
 
     projectiles.forEach((projectile, index2) => {
@@ -265,6 +269,9 @@ function animate() {
 
 window.addEventListener("click", (e) => {
   console.log(projectiles);
+  blaster.play();
+  blaster.playbackRate = 8;
+
   const angle = Math.atan2(
     e.clientY - canvas.height / 2,
     e.clientX - canvas.width / 2
@@ -281,5 +288,6 @@ startGame.addEventListener("click", () => {
   init();
   animate();
   spawnEnemies();
+  music.play();
   startWindow.style.display = "none";
 });
