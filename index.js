@@ -11,10 +11,10 @@ const startGame = document.getElementById("startGame");
 const startWindow = document.getElementById("startWindow");
 const endScore = document.getElementById("endScore");
 
-const music = new Audio("../Demo-Shooter/Data/Wizario - VideoGame.wav");
-const blaster = new Audio("../Demo-Shooter/Data/blaster.mp3");
-const dead = new Audio("../Demo-Shooter/Data/dead.mp3");
-const hit = new Audio("../Demo-Shooter/Data/hit.mp3");
+const music = new Audio("./Data/Wizario - VideoGame.wav");
+const blaster = new Audio("./Data/blaster.mp3");
+const dead = new Audio("./Data/dead.mp3");
+const hit = new Audio("./Data/hit.mp3");
 
 // here I define the player class *****************
 
