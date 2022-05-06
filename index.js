@@ -15,7 +15,7 @@ const music = new Audio("./Data/Wizario - VideoGame.wav");
 const blaster = new Audio("./Data/blaster.mp3");
 const dead = new Audio("./Data/dead.mp3");
 const hit = new Audio("./Data/hit.mp3");
-
+//asd
 // here I define the player class *****************
 
 class Player {
